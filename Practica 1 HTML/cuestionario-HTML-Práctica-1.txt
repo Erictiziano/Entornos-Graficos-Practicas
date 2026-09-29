@@ -1,4 +1,11 @@
 1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?
-HTML es un lenguaje de marcado para la elaboración de páginas web. 
-Que sea de marcado significa quesignifica que no se utiliza para programar lógica, 
-sino para estructurar y dar significado al contenido de una página web mediante el uso de etiquetas.
+HTML es un lenguaje de marcado para la elaboración de páginas web. Que sea de marcado significa quesignifica que no se utiliza para programar lógica, sino para estructurar y dar significado al contenido de una página web mediante el uso de etiquetas. 
+Fue creado por Tim Berners-Lee en 1991, tuvo 7 versiones distintas resaltando la quinta revision que introdujo cambios importantes la ultima version se llama HTML Living Standard y fue lanzada en el 2019 con el objetivo de abandonar la numeracion de HTML (1.0) o HTML5.
+2. ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos con HTML?
+Separar estructura y presentación, Considerar la accesibilidad universal a la Web, Ayudar con la representación incremental.
+3. En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y obsoleto?
+Un elemento o atributo se considera desaprobado cuando ha quedado anticuado debido a la existencia de estructuras más nuevas y un elemento o atributo se considera obsoleto cuando ha dejado de estar definido en la especificación y no hay garantía de que los agentes de usuario le sigan dando soporte.
+4. Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+El DTD es la declaración del tipo de documento (DTD Document Type Declaration) hay tres tipos DTD HTML 4.01 Estricto, DTD HTML 4.01 Transicional, DTD HTML 4.01 para Documentos con Marcos.
+5. Qué son los metadatos y cómo se especifican en HTML?
+los metadatos son información sobre un documento más que contenido del propio documento se especifican dentro de la cabecera del documento (<HEAD>) mediante la etiqueta <META>, combinando los atributos name (o http-equiv) y content.
