@@ -22,4 +22,55 @@ Este elemento de contenido se coloca dentro del body. Es un elemento en línea, 
 intentar insertar una imagen de 32 × 32 píxeles en la página, pero como el atributo src esta vacio no carga ninguna imagen, muestra el contenido que se aloja en el atributo alt
 "lugar imagen" estaria cumpliendo la funcion "marcador de posición" hasta que se indique la ruta de una imagen real. 
 IMG elemento (todo), <img ... /> etiqueta (obligaroria) no lleva etiqueta de cierre, src atributo (obligatorio), alt atributo (obligatorio), "lugar imagen" valor del atributo alt
-(obligatorio)
+(obligatorio), id atributo (opcional), "im1" valor del atributo id, width atributo (opcional), "32" valor del atributo width, longdesc atributo (opcional), "detalles.htm" 
+valor del atributo anterior.
+
+2.d)
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+Es un elemento vacío, no tiene contenido ni etiqueta de cierre. Siempre dentro de la sección head, no puede ir en el body. La primer etiqueta declara una lista de palabras clave
+del sitio casa, compra, venta, alquiler no tiene efecto práctico visible. La segunda etiqueta con http-equiv simula una cabecera HTTP, expires indica la fecha en que el contenido
+"vence" y debe volver a pedirse al servidor en lugar de usar la copia en caché. META elemento, <meta ... /> etiqueta (opcional) no lleva etiqueta de cierre, name atributo (obligatoria
+si se pone el meta), "keywords" valor del atributo name, lang atributo (opcional), "es" valor del atributo lang, content atributo (obligatorio), "casa, compra, venta, alquiler"
+contenido del atributo content.
+
+2.e)
+<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8" rel="help">Resumen HTML </a>
+Este elemento en línea se coloca dentro de la sección body. Crea un hipervínculo, muestra el texto "Resumen HTML" y, al hacer clic, lleva al usuario a la página. Por defecto el texto
+se ve subrayado.
+A elemento, <a ...> etiqueta de apertura (obligatoria) href atributo (obligatorio), "http://www.e-style.com.ar/resumen.html" valor del atributo href, type atributo (opcional),
+"text/html" valor
+del atributo type, hreflang atributo (opcional), "es" valor del atributo hreflang, charset atributo (opcional), "utf-8" contenido del atributo chareset,  rel atributo (opcional), 
+"help" valor del atributo rel, Resumen HTML contenido (obligatorio), </a> etiqueta de cierre (obligatoria).
+
+2.f)
+<table width="200" summary="Datos correspondientes al ejercicio vencido">
+<caption align="top"> Título </caption>
+<tr>
+<th scope="col">&nbsp;</th>
+<th scope="col">A</th>
+<th scope="col">B</th>
+<th scope="col">C</th>
+</tr>
+<tr>
+<th scope="row">1º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th scope="row">2º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+Este elemento de bloque se coloca dentro de la sección body. Crea una tabla de 200 píxeles de ancho, con un título ubicado arriba, una fila de encabezados de columna y dos filas de
+datos, cada una con un encabezado de fila y tres celdas vacías.
+table elemento, <table> etiqueta de apertura (obligatoria), width atributo (opcional), "200" valor del atributo width, summary atributo (opcional), "Datos correspondientes al
+ejercicio vencido" valor del atributo summary, contenido: caption y filas tr (obligatorio), </table> etiqueta de cierre (obligatoria). Caption elemento (opcional), <caption> etiqueta
+de apertura (obligatoria), align atributo (opcional), "top" valor del atributo align , " Título " contenido (obligatorio), </caption> etiqueta de cierre (obligatoria). tr elemento,
+<tr> etiqueta de apertura (obligatoria), contenido: celdas th y td (obligatorio), </tr> etiqueta de cierre (obligatoria). Se repite tres veces: una fila de encabezados y dos filas de
+datos. th elemento, <th> etiqueta de apertura (obligatoria), scope atributo (opcional), "col" valor del atributo scope en las celdas de la primera fila, "row" valor del atributo scope
+en las celdas de la primera columna, contenido: &nbsp, "A", "B", "C", "1º" y "2º" (contenido opcional), </th> etiqueta de cierre (obligatoria). td elemento (celda de datos), <td>
+etiqueta de apertura (obligatoria), contenido: &nbsp; (opcional), </td> etiqueta de cierre (obligatoria). Hay seis celdas td en total, tres por cada fila de datos.
