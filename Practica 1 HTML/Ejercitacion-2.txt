@@ -1,0 +1,25 @@
+Analizar los siguientes segmentos de código indicando en qué sección del documento HTML
+se colocan, cuál es el efecto que producen y señalar cada uno de los elementos, etiquetas, y atributos
+(nombre y valor), aclarando si es obligatorio.
+2.a)
+<!-- Código controlado el día 12/08/2009 →
+Los comentarios en HTML pueden ir en cualquier parte del documento, no tienen un lugar fijo. No producen ningun efecto sobre lo que se visualiza en la pantalla por el usuario.
+Si sirven para que aquellas personas que tienen acceso al codigo fuente puedan ubicarse o ver lo que el programador quiso dejar aclarado en su codigo.
+Un comentario no es un elemento HTML, no tiene etiqueta de apertura ni de cierre propiamente dichas, y no tiene atributos. Tiene tres partes Delimitador de apertura(obligatorio),
+contenido (texto libre) y Delimitador de cierre(obligatorio), el delimitador de cierre corresponde a --> y no a → como esta en el texto original, realice la respuesta de este punto
+tomando como que el delimitador de cierre fuese -->.
+
+2.b)
+<div id="bloque1">Contenido del bloque1</div>
+Esta etiqueta va dentro del body de nuestro documento obligatoriamente, no puede ir dentro del head. El efecto que produce no es visual mas que un salto de linea, a menos que se le de
+un estilo en css. Lo que si genera es un bloque de contenido con la utilidad de darle un ID para modificarlo en css.
+Div elemento (completo),<div..> etiqueta de apertura (obligatoria), id atributo (opcional), "bloque1" nombre del atributo (obligatorio si esta el id), Contenido del bloque1 
+contenido del div (opcional), </div> etiqueta de cierre (obligatoria)
+
+2.c)
+<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" />
+Este elemento de contenido se coloca dentro del body. Es un elemento en línea, por lo que puede ir dentro de un párrafo, un div, un enlace, etc. El efecto que produce es
+intentar insertar una imagen de 32 × 32 píxeles en la página, pero como el atributo src esta vacio no carga ninguna imagen, muestra el contenido que se aloja en el atributo alt
+"lugar imagen" estaria cumpliendo la funcion "marcador de posición" hasta que se indique la ruta de una imagen real. 
+IMG elemento (todo), <img ... /> etiqueta (obligaroria) no lleva etiqueta de cierre, src atributo (obligatorio), alt atributo (obligatorio), "lugar imagen" valor del atributo alt
+(obligatorio)
