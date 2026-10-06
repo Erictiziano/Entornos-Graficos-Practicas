@@ -1,0 +1,55 @@
+En cada caso, explicar las diferencias entre los segmentos de código y sus visualizaciones:
+
+3.a)
+
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+  *Código: enlace básico. href indica el destino.
+  *Visualización: el texto "Click aquí para ir a Google" aparece como link.
+  *Comportamiento: al hacer clic, Google se abre en la misma pestaña, reemplazando la página actual.
+
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+  *Código: diferencia con el anterior target="_blank"
+  *Comportamiento: Google se abre en una pestaña o ventana nueva, y la página original queda abierta.
+
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+  *Código: usa atributos type="text/html": indica el tipo MIME del recurso enlazado. Es solo informativo, el navegador no lo usa para nada importante, hreflang="es": avisa que el 
+  contenido de la página enlazada está en español. También es informativo útil para buscadores y accesibilidad, charset="utf-8": indicaba la codificación de caracteres de la página enlazada.
+  rel="help" define la relación entre la página actual y la enlazada: en este caso, que el enlace lleva a ayuda o documentación relacionada con el contexto. Los navegadores casi no hacen 
+  nada especial con este valor.
+  *Visualización: no se ve nada, porque la etiqueta no tiene texto y además no está cerrada (falta el contenido y el </a>). Para que se vea un enlace habría que agregar el texto
+  y cerrar la etiqueta.
+  *Nota: hay un espacio en la URL www. google.com.ar, lo que la rompe. No hay cambios visuales porque los atributos agregados son informativos para el browser.
+
+<a href="#">Click aquí para ir a Google</a>
+  *Código: href="#" es un enlace vacío o "ancla nula".
+  *Diferencias: No conecta con google a pesar de que el texto lo diga.
+
+<a href="#arriba">Click aquí para volver arriba</a>
+  *Código: #arriba es un enlace interno que apunta a un elemento de la misma página cuyo id sea arriba.
+  *Comportamiento: al hacer clic, la página se desplaza hasta el punto donde está el ancla arriba
+
+<a name="arriba" id="arriba"></a>
+  *Código: define el destino del enlace anterior con el atributo name.
+  *Visualización: no se ve nada, ya que no tiene contenido. Es solo un marcador invisible en la página.
+
+3.b)
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+  *Código: la imagen está fuera del enlace. Solo el texto está dentro de <a>.
+  *Visualización: la imagen y el texto "Click aquí" aparecen en la misma línea, uno al lado del otro y sin espacio entre ellos. El texto
+  se ve azul y subrayado la imagen no.
+  *Comportamiento: solo el texto es clickeable. Clickear la imagen no hace nada.
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+  *Código: la imagen está dentro del enlace. El texto está fuera.
+  *Visualización: con un espacio entre el texto y la imagen. El texto es texto común. La imagen, al ser un link, puede mostrar un borde azul en navegadores viejos.
+  *Comportamiento: solo la imagen es clickeable. Clickear el texto no hace nada.
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p> (caso 3)
+  *Código: imagen y texto están ambos dentro de un único <a>.
+  *Visualización: imagen y texto en la misma línea, sin espacio. El texto se ve como link y la imagen también puede mostrar borde en navegadores viejos.
+  *Comportamiento: tanto la imagen como el texto son clickeables y llevan al mismo destino. Es un solo enlace
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p>
+  *Código: hay dos enlaces separados al mismo destino: uno envuelve la imagen y otro el texto, con un espacio entre ambos
+  *Visualización: parecida a la del caso 3 imagen y texto con link, pero con un espacio visible entre ellos, y ese espacio no está subrayado porque queda fuera de los dos enlaces.
+  *Comportamiento: imagen y texto son clickeables, pero como enlaces independientes. Cada uno lleva a Google por su cuenta.
