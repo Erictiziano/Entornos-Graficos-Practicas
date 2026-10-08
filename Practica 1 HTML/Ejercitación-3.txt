@@ -53,3 +53,61 @@ En cada caso, explicar las diferencias entre los segmentos de código y sus visu
   *Código: hay dos enlaces separados al mismo destino: uno envuelve la imagen y otro el texto, con un espacio entre ambos
   *Visualización: parecida a la del caso 3 imagen y texto con link, pero con un espacio visible entre ellos, y ese espacio no está subrayado porque queda fuera de los dos enlaces.
   *Comportamiento: imagen y texto son clickeables, pero como enlaces independientes. Cada uno lleva a Google por su cuenta.
+3.c)
+<ul>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ul>
+*Código: lista no ordenada con tres ítems.
+*Visualización: tres líneas, cada una con una viñeta (●) adelante y con sangría a la izquierda:
+● xxx
+● yyy
+● zzz
+
+<ol>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ol>
+*Código:<ol>, lista ordenada.
+*Visualización: tres líneas con sangría, pero numeradas automáticamente:
+1. xxx
+2. yyy
+3. zzz
+
+<ol>
+<li>xxx</li>
+</ol>
+<ol>
+<li value="2">yyy</li>
+</ol>
+<ol>
+<li value="3">zzz</li>
+</ol>
+*Código: En lugar de una lista con tres ítems, hay tres listas distintas de un ítem cada una. Como cada <ol> empieza a contar de nuevo desde 1, el value="2" y value="3" fuerzan los números del segundo y tercer ítem.
+*Visualización: Al ser tres listas por separado puedo haber un pequeño espacio entre los items.
+
+<blockquote>
+<p>1. xxx<br />
+2. yyy<br />
+3. zzz</p>
+</blockquote>
+*Código: no es una lista. Es un bloque de cita con un párrafo donde los números están escritos a mano como texto y los saltos de línea los hace <br />.
+*Visualización: parece una lista numerada, pero con sangría a ambos lados por el <blockquote>, y con espacio arriba y abajo por el <p>.
+
+3.d)
+<table border="1" width="300">
+<tr>
+<th>Columna 1</th>
+<th>Columna 2</th>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
