@@ -13,8 +13,10 @@ En cada caso, explicar las diferencias entre los segmentos de código y sus visu
 
 <a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
   *Código: usa atributos type="text/html": indica el tipo MIME del recurso enlazado. Es solo informativo, el navegador no lo usa para nada importante, hreflang="es": avisa que el 
-  contenido de la página enlazada está en español. También es informativo útil para buscadores y accesibilidad, charset="utf-8": indicaba la codificación de caracteres de la página enlazada.
-  rel="help" define la relación entre la página actual y la enlazada: en este caso, que el enlace lleva a ayuda o documentación relacionada con el contexto. Los navegadores casi no hacen 
+  contenido de la página enlazada está en español. También es informativo útil para buscadores y accesibilidad, charset="utf-8": indicaba la codificación de caracteres de la página
+  enlazada.
+  rel="help" define la relación entre la página actual y la enlazada: en este caso, que el enlace lleva a ayuda o documentación relacionada con el contexto. Los navegadores casi
+  no hacen 
   nada especial con este valor.
   *Visualización: no se ve nada, porque la etiqueta no tiene texto y además no está cerrada (falta el contenido y el </a>). Para que se vea un enlace habría que agregar el texto
   y cerrar la etiqueta.
@@ -59,22 +61,22 @@ En cada caso, explicar las diferencias entre los segmentos de código y sus visu
 <li>yyy</li>
 <li>zzz</li>
 </ul>
-*Código: lista no ordenada con tres ítems.
-*Visualización: tres líneas, cada una con una viñeta (●) adelante y con sangría a la izquierda:
-● xxx
-● yyy
-● zzz
+  *Código: lista no ordenada con tres ítems.
+  *Visualización: tres líneas, cada una con una viñeta (●) adelante y con sangría a la izquierda:
+    ● xxx
+    ● yyy
+    ● zzz
 
 <ol>
 <li>xxx</li>
 <li>yyy</li>
 <li>zzz</li>
 </ol>
-*Código:<ol>, lista ordenada.
-*Visualización: tres líneas con sangría, pero numeradas automáticamente:
-1. xxx
-2. yyy
-3. zzz
+   *Código:<ol>, lista ordenada.
+   *Visualización: tres líneas con sangría, pero numeradas automáticamente:
+      1. xxx
+      2. yyy
+      3. zzz
 
 <ol>
 <li>xxx</li>
@@ -85,16 +87,17 @@ En cada caso, explicar las diferencias entre los segmentos de código y sus visu
 <ol>
 <li value="3">zzz</li>
 </ol>
-*Código: En lugar de una lista con tres ítems, hay tres listas distintas de un ítem cada una. Como cada <ol> empieza a contar de nuevo desde 1, el value="2" y value="3" fuerzan los números del segundo y tercer ítem.
-*Visualización: Al ser tres listas por separado puedo haber un pequeño espacio entre los items.
+   *Código: En lugar de una lista con tres ítems, hay tres listas distintas de un ítem cada una. Como cada <ol> empieza a contar de nuevo desde 1, el value="2" y value="3" fuerzan los
+    números del segundo y tercer ítem.
+   *Visualización: Al ser tres listas por separado puedo haber un pequeño espacio entre los items.
 
 <blockquote>
 <p>1. xxx<br />
 2. yyy<br />
 3. zzz</p>
 </blockquote>
-*Código: no es una lista. Es un bloque de cita con un párrafo donde los números están escritos a mano como texto y los saltos de línea los hace <br />.
-*Visualización: parece una lista numerada, pero con sangría a ambos lados por el <blockquote>, y con espacio arriba y abajo por el <p>.
+  *Código: no es una lista. Es un bloque de cita con un párrafo donde los números están escritos a mano como texto y los saltos de línea los hace <br />.
+  *Visualización: parece una lista numerada, pero con sangría a ambos lados por el <blockquote>, y con espacio arriba y abajo por el <p>.
 
 3.d)
 <table border="1" width="300">
@@ -111,3 +114,202 @@ En cada caso, explicar las diferencias entre los segmentos de código y sus visu
 <td>Celda 4</td>
 </tr>
 </table>
+   *Código: la primera fila usa <td> común, y para lograr el aspecto de encabezado se le agrega a mano un <div align="center"> (centrado) y un <strong> (negrita) en cada celda.
+   *Visualización: Se ven iguales.
+
+3.e)
+<table width="200">
+<caption>Título</caption>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+  *Código: el título se define con <caption>, que es un elemento propio de la tabla, pero no es una fila ni una celda. La tabla tiene solo 2 filas de 3 celdas.
+  *Visualización: la palabra “Título” aparece centrada arriba de la tabla, fuera de la grilla gris. Debajo, 2 filas de 3 celdas grises de 200 px de ancho en total.
+
+<table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+  *Código: no usa <caption>. El título es una fila más de la tabla, con una única celda que ocupa las 3 columnas y el texto centrado con <div align="center">. Resultado: la tabla tiene
+   3 filas.
+  *Visualización: La diferencia es que el título ahora está dentro de la tabla, y esa celda no tiene fondo gris.
+
+3.f)
+<table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2" bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+  *Código: la fila 2 tiene 3 celdas, y la primera tiene rowspan="2", por lo que baja y ocupa también la fila 3. Por eso la fila 3 solo declara 2 celdas: el primer lugar ya está ocupado
+  por la celda de arriba.
+  Visualización: “Título” centrado arriba. Debajo, una celda alta a la izquierda (ocupa las dos filas) y, a su derecha, 2 columnas × 2 filas de celdas chicas. Todo en gris.
+
+<table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2" bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+  *Código: la fila 2 tiene 2 celdas: la primera con colspan="2" (se estira hacia la derecha ocupando 2 columnas) y una celda normal. Suman 3 columnas. La fila 3 tiene 3 celdas comunes.
+
+3.g)
+<table width="200" border="1">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2" rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table>
+  *Código: la tabla tiene 3 columnas. La fila 1 es una sola celda que ocupa las 3 (colspan="3"). En la fila 2, la primera celda combina 2 columnas y 2 filas a la vez  
+  y ocupa un bloque de 2×2, y después viene una celda normal en la tercera columna. En la fila 3 solo se declara una celda, porque las columnas 1 y 2 ya están ocupadas por
+  el bloque de arriba, así que esa celda cae en la columna 3. Esa celda lleva width="50%", o sea que la columna 3 ocupa la mitad de la tabla.
+  *Visualización: “Título” centrado arriba, dentro de su propia celda con borde. Debajo, a la izquierda, un bloque grande. A la derecha, dos celdas apiladas, cada una con la mitad de
+  la altura del bloque. Como no se aclaró cellspacing ni cellpadding, se aplican los valores por defecto: se ve una separación entre las celdas, cada una con su propio borde.
+
+<table width="200" border="1" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="2"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table>
+ *codigo: Tiene 2 columnas en lugar de 3, por eso el título lleva colspan="2".
+ El bloque de la izquierda usa solo rowspan="2" (sin colspan), porque ahora es una única columna.
+ Agrega cellpadding="0" y cellspacing="0".
+
+3.h)
+<form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+</fieldset>
+<input type="submit" id="boton1" name="boton1" value="Enviar" />
+</form>
+  *Código: formulario que envía sus datos a procesar.php por el método post, y la respuesta se abre en una pestaña nueva. Dentro tiene un fieldset con el legend “LOGIN”, que agrupa dos
+  campos: uno de texto (usu1) y uno de contraseña (clave1), ambos con value="xxx". Fuera del fieldset hay un botón submit.
+  *Visualización: un recuadro con borde con “LOGIN” sobre el borde, y adentro “Usuario:” con una caja que ya contiene xxx visible; en la línea de abajo “Clave:” con una caja que
+  muestra puntos (••• ) en lugar de xxx, porque es de tipo password. Debajo del recuadro, un botón “Enviar”.
+
+<form id="form2" name="form2" action="" method="get" target="_blank">
+LOGIN<br />
+<label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+<label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+<input type="submit" id="boton2" name="boton2" value="Enviar" />
+</form>
+  *Código: action="" (vacío): se envía a la misma página. method="get": los datos van en la URL.
+   No usa fieldset ni legend: “LOGIN” es texto suelto seguido de un <br />.
+   Usa <label> envolviendo el texto y el campo.
+   Los campos no tienen value, y el campo “Clave” es type="text", no password.
+   El botón submit queda dentro del flujo normal, sin recuadro.
+  *Visualización: No hay recuadro: “LOGIN” es una línea de texto común arriba. Las dos cajas aparecen vacías. La clave se ve en texto claro al escribirla (no se ocultan los caracteres).
+   Al hacer clic en el texto “Usuario:” o “Clave:” el cursor pasa a la caja correspondiente, gracias al label. 
+   Al enviar, los datos aparecen en la URL (por get), incluida la clave: poco seguro.
+
+3.i)
+<label>Botón 1
+<button type="button" name="boton1" id="boton1">
+<img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+<b>CLICK AQUÍ</b></button></label>
+  *Código: hay un label con el texto “Botón 1” que envuelve a un <button> de tipo button. Dentro del botón hay una imagen logo.jpg de 30×20 px, un salto de línea y el texto “CLICK
+  AQUÍ” en negrita (<b>).
+  *Visualización: el texto “Botón 1” seguido de un botón que muestra la imagen arriba y debajo “CLICK AQUÍ” en negrita, ambos dentro del mismo botón. Si la imagen no se encuentra, en
+  su lugar se muestra el texto alternativo “Botón con imagen”.
+
+<label>Botón 2
+<input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+</label>
+  *Código: en lugar de la etiqueta <button> usa <input type="button">, que es una etiqueta vacía y no puede tener contenido adentro. El texto del botón se define con
+  el atributo value. Por eso no hay imagen, ni <br />, ni <b>.
+  *Visualización: se ve el texto “Botón 2” seguido de un botón que muestra solamente “CLICK AQUÍ” en una sola línea, con el formato normal de los botones (sin negritay sin imagen). Es
+  más simple y más chico que el primero.
+
+3.j)
+<p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p>
+  *Código: un párrafo con dos botones de opción. Ambos tienen el mismo name="opcion", por lo que forman un solo grupo. Cada uno está envuelto en su label y tiene su propio id y value.
+  Un <br /> separa las dos líneas.
+  *Visualización: dos líneas, cada una con un círculo seguido de su texto: ○ X y ○ Y. Al principio ninguno está seleccionado.
+
+<p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p>
+  *Código: el primer radio tiene name="opcion1" y el segundo name="opcion2", es decir, nombres distintos, por lo que ya no forman un grupo: son dos grupos independientes de un solo
+  botón cada uno.
+  Como son grupos separados, se pueden seleccionar los dos al mismo tiempo, y marcar uno no desmarca al otro. Además, un radio ya marcado no se puede desmarcar haciendo clic de nuevo,  
+  porque no hay otra opción de su grupo que lo reemplace. Al enviar el formulario se mandan dos datos distintos (opcion1=X y opcion2=Y), en lugar de uno solo.
+  
+3.k)
+<select name="lista">
+<optgroup label="Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label="Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select>
+  *Código: una lista desplegable llamada lista con dos grupos de opciones. El grupo “Caso 1” contiene Mayo y Junio, y el grupo “Caso 2” contiene también Mayo y Junio.
+  *Visualización: una lista desplegable de una sola línea, que al principio muestra la primera opción (“Mayo”). Al hacer clic se despliega y se ven los títulos de grupo “Caso 1” y
+  “Caso 2” (en negrita, no seleccionables), y debajo de cada uno sus opciones, con una pequeña sangría.
+
+<select name="lista[]" multiple="multiple">
+<optgroup label=" Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label=" Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select>
+  *Código: el name pasa a ser lista[] y se agrega multiple="multiple". Además, los títulos de los grupos tienen un espacio al principio (" Caso 1" y " Caso 2"). Las opciones son las
+  mismas.
+  *Visualización: deja de ser una lista desplegable y pasa a ser un cuadro de lista abierto, que muestra varias líneas a la vez (con barra de desplazamiento si no entran todas). Se ven
+  directamente los títulos de grupo y las cuatro opciones, sin elegir ninguna al principio. Los títulos de grupo se ven apenas corridos a la derecha por el espacio inicial.
