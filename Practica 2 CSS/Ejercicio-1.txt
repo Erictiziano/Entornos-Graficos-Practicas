@@ -1,0 +1,40 @@
+Ejercicio 1: Responder
+1. ¿ Qué es CSS y para qué se usa?
+CSS es un lenguaje de hojas de estilo que nos permite controlar la apariencia completa de un sitio web. Incluye modificaciones en el texto, justificaciones, colores, todo.
+
+2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
+Una regla CSS tiene la forma selector { propiedad: valor; }. El selector, por ejemplo h1, le indica al navegador a qué elementos del HTML se aplica, la propiedad, por ejemplo color 
+especifica qué aspecto se va a cambiar; y el valor por ejemplo red establece cómo se cambia. Ejemplo: h1 { color: red; } pone en rojo todos los títulos <h1>.
+Además los selectores pueden agruparse con comas h1, h2, h3 { color: red; }, y si una regla tiene varias propiedades, se separan con punto y coma. Por otro lado, si un valor tiene más
+de una palabra, va entre comillas (font-family: "sans serif";).
+
+3. ¿ Cuáles son las tres formas de dar estilo a un documento?
+Existen tres niveles para da estilo a un documento
+  +Nivel elemento HTML: es la forma mas sencilla pero menos recomendada. Se utiliza el atributo style para cada elmento a definir
+  +Nivel pagina: dentro de la etiqueta <head> agregamos la etiqueta <style> y en ese lugar definimos todos los estilos para todos los elementos que necesitamos
+  +Nivel archivo externo: esta metodología es la más común, trata de crear uno o varios archivos con extension .css donde definiremos todos los estilos para una parte pequeña, grande o 
+  muy especifica del sitio o de una pagina en particular. Se adapta mejor a la estructura, porque permite tener los elementos por separado de su estilo.
+
+4. ¿ Cuáles son los distintos tipos de selectores más utilizados?
+                    Ejemplifique cada uno
+Los selectores más usados son: el de etiqueta (p { color: red; }), que afecta a todos los elementos de ese tipo; el de clase (.destacado { ... }), que se aplica a los elementos 
+con class="destacado" y puede repetirse; el de id (#encabezado { ... }), que se aplica a un único elemento con ese id; el universal (* { margin: 0; }), que afecta a todos los elementos;
+el agrupado (h1, h2, h3 { color: red; }), que aplica una misma regla a varios selectores; el descendiente (div p { color: blue; }), que afecta a los <p> dentro de un <div>; el de atributo
+(input[type="text"] { ... }), que selecciona según un atributo; y las pseudoclases (a:hover { color: green; }), que se aplican según el estado del elemento.
+
+5. ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?
+Una pseudoclase es una palabra clave que se agrega a un selector, precedida por dos puntos (:), para aplicar estilos según el estado del elemento, sin necesidad de agregar una clase
+en el HTML. Su forma es selector:pseudoclase { propiedad: valor; }.
+Las más usadas en vínculos son: a:link (enlace aún no visitado), a:visited (ya visitado), a:hover (cuando el mouse pasa por encima) y a:active (mientras se hace clic). 
+Se recomienda escribirlas en ese orden (link, visited, hover, active) para que unas reglas no anulen a otras.
+
+6. ¿ Qué es la herencia?
+La herencia es el mecanismo por el cual un elemento hijo toma automáticamente algunos valores de propiedades de su elemento padre, sin que haya que declararlos de nuevo. 
+Por ejemplo, si se define body { color: blue; font-family: verdana; }, todos los elementos dentro del body (párrafos, títulos, listas) se mostrarán con ese color y esa fuente, 
+a menos que tengan una regla propia que lo cambie.
+
+7. ¿ En qué consiste el proceso denominado cascada?
+La cascada es el proceso que usa el navegador para decidir qué estilo aplicar cuando varias reglas entran en conflicto sobre la misma propiedad de un elemento. Para resolverlo 
+considera tres criterios, en este orden: la importancia (!important gana sobre lo normal), la especificidad (estilo en línea > id > clase > etiqueta) y el orden de aparición 
+(si hay empate, gana la regla que aparece última). Por ejemplo, con p { color: red; } y .destacado { color: blue; }, un <p class="destacado"> se ve azul porque la clase es más 
+específica que la etiqueta.
