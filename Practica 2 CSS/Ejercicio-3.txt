@@ -1,0 +1,39 @@
+p.quitar {
+color: red;
+}
+  *Declaración: selector de tipo p combinado con la clase quitar. Establece color: red.
+  *Aplicación: se aplica a los <p> con class="quitar"
+  *Efecto: los dos párrafos se ven con texto rojo
+
+*.desarrollo {
+font-size: 8px;
+}
+  *Declaración: selector universal más la clase desarrollo, equivalente a .desarrollo, establece font-size: 8px.
+  *Aplicación: solo al primer párrafo, <p class="desarrollo">En este primer párrafo trataremos lo siguiente:</p>. Es el único elemento con esa clase.
+  *Efecto: el texto de ese párrafo se ve en 8px.
+  
+.importante {
+font-size: 20px;
+}
+  *Declaración: selector de clase simple. Establece font-size: 20px.
+  *Aplicación: a los elementos con class="importante"
+  *Efecto: ambos párrafos se ven con letra de 20px.
+
+<p class="desarrollo">
+En este primer párrafo trataremos lo siguiente:
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p class="quitar">
+Este párrafo debe ser quitado de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p >
+En este otro párrafo trataremos otro tema:<br />
+xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p class="importante">
+Y este es el párrafo más importante de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</ p>
+<h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1>
+<p class="quitar importante">Se pueden aplicar varias clases a la vez</p>
