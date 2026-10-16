@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Ejercicio-5.css">
+    <title>Ejercicio 5 - Prueba de selectores</title>
+</head>
+<body>
+
+    <!-- 1. Enfatizados dentro de títulos: ROJOS -->
+    <h1>Consigna 1: título con <em>em (rojo)</em> y <strong>strong (rojo)</strong></h1>
+    <h2>Un h2 con <em>em (rojo)</em></h2>
+    <h3>Un h3 con <strong>strong (rojo)</strong></h3>
+    <p>Un párrafo con <em>em (NO debe ser rojo)</em> y <strong>strong (NO debe ser rojo)</strong>.</p>
+
+    <hr>
+
+    <!-- 2. Elementos con href dentro de un párrafo dentro de un bloque: NEGRO -->
+    <h2>Consigna 2</h2>
+    <div>
+        <p>Enlace dentro de p dentro de div: <a href="https://www.wikipedia.org">debe ser negro</a></p>
+        <a href="https://www.wikipedia.org">Enlace en div SIN párrafo (NO debe ser negro)</a>
+    </div>
+    <p>Enlace en p SIN div: <a href="https://www.wikipedia.org">NO debe ser negro</a></p>
+
+    <hr>
+
+    <!-- 3. Listas no ordenadas dentro de #ultimo: AMARILLO, enlaces AZUL -->
+    <h2>Consigna 3</h2>
+    <div id="ultimo">
+        <ul>
+            <li>Ítem de texto normal (amarillo)</li>
+            <li>Otro ítem (amarillo)</li>
+            <li><a href="https://www.wikipedia.org">Enlace a otra página (azul)</a></li>
+        </ul>
+    </div>
+    <ul>
+        <li>Lista fuera de #ultimo (color normal)</li>
+    </ul>
+
+    <hr>
+
+    <!-- 4. #importante: VERDE dentro de un bloque, ROJO dentro de un título -->
+    <h2>Consigna 4</h2>
+    <div>
+        <p>Dentro de un div: <span id="importante">importante (verde)</span></p>
+    </div>
+    <h3>Dentro de un título: <span id="importante">importante (rojo)</span></h3>
+    <div>
+        <h3>Título dentro de un div: <span id="importante">importante (rojo, pisa al verde)</span></h3>
+    </div>
+
+    <hr>
+
+    <!-- 5. h1 con atributo title: AZUL -->
+    <h2>Consigna 5</h2>
+    <h1 title="Cualquier valor">h1 con title (azul)</h1>
+    <h1 title="">h1 con title vacío (azul)</h1>
+    <h1>h1 sin title (color normal)</h1>
+
+    <hr>
+
+    <!-- 6. Enlaces en listas ordenadas: azul no visitado, violeta visitado, sin subrayado -->
+    <h2>Consigna 6</h2>
+    <ol>
+        <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
+        <li><a href="https://developer.mozilla.org">MDN</a></li>
+        <li><a href="https://www.w3.org">W3C</a></li>
+    </ol>
+    <p>Hacé clic en alguno y volvé: debería pasar a violeta.</p>
+
+</body>
+</html>

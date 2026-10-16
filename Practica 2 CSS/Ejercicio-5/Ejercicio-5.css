@@ -1,0 +1,41 @@
+h1 em,h2 em,h3 em,h4 em,h5 em,h6 em{
+    color: red;
+}
+/* Para el punto 1 como no se exactamente a que se refiere con enfatizado dejo dos opciones posibles */
+h1 strong,h2 strong,h3 strong,h4 strong,h5 strong,h6 strong{
+    color: red;
+}
+
+div p [href] {
+    color: black;
+}
+
+div#ultimo ul li{
+    color: yellow;
+}
+
+div#ultimo ul a{
+    color: blue;
+}
+
+div #importante {
+    color: green;
+}
+
+h1 #importante,h2 #importante,h3 #importante,h4 #importante,h5 #importante,h6 #importante {
+    color: red;
+}
+
+h1[title]{
+    color: blue;
+}
+
+ol a:link{
+    color: blue;
+    text-decoration: none;
+}
+
+ol a:visited{
+    color: purple;
+    text-decoration: none;
+}
