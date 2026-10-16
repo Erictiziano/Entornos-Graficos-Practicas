@@ -1,0 +1,35 @@
+Analizar el siguiente código señalando declaraciones y aplicaciones de reglas, y su efecto.
+
+p#normal {
+font-family: arial,helvetica;
+font-size: 11px;
+font-weight: bold;
+}
+  *Declaración: se define una regla con selector p#normal, que combina el tipo p y el id normal. Establece tres propiedades: font-family: arial, helvetica, font-size: 11px y 
+  font-weight: bold.
+  *Aplicación: se aplica solo al elemento <p id="normal">Este es un párrafo</p>, porque es el único párrafo con ese id.
+  *Efecto: el texto se muestra en Arial (o Helvetica si no está disponible), con tamaño de 11px y en negrita.
+
+*#destacado {
+border-style: solid;
+border-color: blue;
+border-width: 2px;
+}
+  *Declaración: se define una regla con selector universal más id (*#destacado), equivalente a #destacado. Establece border-style: solid, border-color: blue y border-width: 2px.
+  *Aplicación: se aplica a todo elemento con id="destacado", sin importar su tipo. En este código lo cumplen dos: <p id="destacado"> y <table id="destacado">.
+  *Efecto: ambos elementos quedan rodeados por un borde azul sólido de 2px. En la tabla el borde rodea solo el contorno exterior, no la celda <td>. Por otro lado repetir el id es 
+  incorrecto en HTML, debería ser una clase, aunque el navegador igual aplica el estilo a los dos.
+
+#distinto {
+background-color: #9EC7EB;
+color: red;
+}
+  *Declaración: se define una regla con selector de id #distinto. Establece background-color: #9EC7EB y color: red.
+  *Aplicación: se aplica al elemento <p id="distinto">Este es el último párrafo</p>.
+  *Efecto: el párrafo tiene fondo celeste y texto rojo.
+
+<p id="normal">Este es un párrafo</p>
+<p id="destacado">Este es otro párrafo</p>
+<table id="destacado"><tr><td>Esta es una tabla</td></tr></table>
+<p id="distinto">Este es el último párrafo</p>
+Codigo html donde se aplica el estilo antes mencionado
