@@ -1,0 +1,46 @@
+Dadas las siguientes declaraciones:
+* {color:green; }
+a:link {color:gray }
+a:visited{color:blue }
+a:hover {color:fuchsia }
+a:active {color:red }
+p {font-family: arial,helvetica;font-size: 10px;color:black; }
+.contenido{font-size: 14px;font-weight: bold; }
+
+<body>
+<p class="contenido" style="font-weight: normal;">
+Este es un texto ...............</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con un
+enlace</a></td>
+</tr>
+</table>
+</body>
+
+  ||Párrafo: lo alcanzan varias reglas a la vez. * le da verde, pero p le gana por especificidad y lo deja negro, Arial y de 10px. Después .contenido le gana a p y le cambia el 
+  tamaño a 14px y el peso a negrita. Por último, el estilo en línea tiene la prioridad más alta y pisa la negrita con normal. Queda Arial, negro, 14px, peso normal.
+  ||Tabla: solo la alcanza *, así que el texto queda verde, con tamaño y peso por defecto del navegador.
+  ||Enlace: lo alcanzan * y a:link, que gana por especificidad. Queda gris, con tamaño y peso por defecto. Cambia a azul si fue visitado, a fucsia al pasar el mouse y a rojo al hacer clic.
+
+<body class="contenido">
+<p> Este es un texto................</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con
+un enlace</a></td>
+</tr>
+</table>
+</body>
+
+    ||Body: recibe * (verde) y .contenido (14px, negrita).
+    ||Párrafo: conserva sus 10px, porque la regla p se aplica directamente al elemento y le gana al valor heredado del body. En cambio hereda la negrita, porque p no define font-weight. 
+      Queda Arial, negro, 10px, negrita.
+    ||Tabla: hereda del body el font-size y el font-weight, así que el texto queda verde, 14px y negrita.
+    ||Enlace: igual que la tabla, queda gris, 14px y negrita, y mantiene los cambios de color según el estado.
