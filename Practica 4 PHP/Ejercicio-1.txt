@@ -1,0 +1,58 @@
+<?php
+function doble($i) {
+ return $i*2;
+}
+$a = TRUE;
+$b = "xyz";
+$c = 'xyz';
+$d = 12;
+echo gettype($a);
+echo gettype($b);
+echo gettype($c);
+echo gettype($d);
+if (is_int($d)) {
+ $d += 4;
+}
+if (is_string($a)) {
+ echo "Cadena: $a";
+}
+$d = $a ? ++$d : $d*3;
+$f = doble($d++);
+$g = $f += 10;
+echo $a, $b, $c, $d, $f , $g;
+?>
+
+Ejercicio 1:
+En el siguiente código identificar:
+• las variables y su tipo
+a		boolean
+b	string
+c	string
+d	integer
+f	int 
+g int
+
+• los operadores
+Asignación: =
+Asignación compuesta: += ($d += 4)
+Aritméticos: * ($i*2, $d*3), + ($f + 10)
+Incremento: ++$d (preincremento) y $d++ (postincremento)
+Ternario: ? : ($a ? ++$d : $d*3)
+Coma: separa los argumentos de echo
+
+• las funciones y sus parámetros
+Definida por el usuario: doble($i) tiene un parámetro $i
+Predefinidas de PHP:
+  gettype($var): devuelve el tipo como string.
+  is_int($var): devuelve true si es entero.
+  is_string($var): devuelve true si es string.
+  las distintas variables son sus parametros
+• las estructuras de control
+  if (is_int($d)) { ... }: condicional simple.
+  if (is_string($a)) { ... }: condicional simple.
+  $a ? ++$d : $d*3: condicional ternario.
+
+• cuál es la salida por pantalla
+  booleanstringstringinteger1xyzxyz183444
+  
+  
