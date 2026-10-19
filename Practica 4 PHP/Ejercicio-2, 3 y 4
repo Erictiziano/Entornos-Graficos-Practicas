@@ -1,0 +1,21 @@
+Ejercicio 2: Indicar si los siguientes códigos son equivalentes.
+a) Son equivalentes
+b) Son equivalentes
+c) Son equivalenes
+
+Ejercicio 3: Explicar para qué se utiliza el siguiente código:
+a)Este código genera una tabla HTML vacía de 5 filas por 2 columnas usando PHP. En lugar de escribir a mano todas las etiquetas <tr> y <td>, se usan dos bucles for anidados para que PHP
+las genere.
+
+b) Este código es una página que se envía datos a sí misma: muestra un formulario para ingresar la edad y, cuando el usuario lo envía, la misma página procesa el dato y responde si la 
+persona es “Mayor de edad” o “Menor de edad”
+
+Ejercicio 4:
+Se producen dos salidas:
+Primer echo: El (las variables todavía no existen, así que se reemplazan por nada)
+Segundo echo: El clavel blanco
+se ve asi: El   El clavel blanco
+JUSTIFICACION:
+El primer echo se ejecuta antes del include, cuando $flor y $color todavía no existen, así que PHP las reemplaza por vacío (con un aviso de variable no definida) y sale El seguido de 
+espacios y el salto de línea.
+Luego include 'datos.php' ejecuta ese archivo y define $color = 'blanco' y $flor = 'clavel' en el mismo ámbito. Por eso el segundo echo ya imprime El clavel blanco.
